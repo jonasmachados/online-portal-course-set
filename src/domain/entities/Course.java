@@ -1,21 +1,23 @@
 package domain.entities;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class Course {
 
-    private String courseName;
+    public void totalStudents(Set courseA, Set courseB,Set courseC){
+        
+        Set<User> total = new HashSet<>(courseA);
+		total.addAll(courseB);
+		total.addAll(courseC);
+        System.out.println("Total users: " + total.size());
+    }
+      
 
     //CONSTRUCTOR
-    public Course(String courseName) {
-        this.courseName = courseName;
+    public Course() {
     }
 
-    //GET AND SET
-    public String getCourseName() {
-        return courseName;
-    }
-
-    public void setCourseName(String courseName) {
-        this.courseName = courseName;
-    }
+    
 
 }
